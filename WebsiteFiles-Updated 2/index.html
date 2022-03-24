@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Buy/Sell/Rent Books</title>
+    <meta name="description" 
+    content="Bookfinder is a site for buying, selling &amp; 
+    renting textbooks and used books online.">
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
+    font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm
+    /Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qx
+    O8w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>Blur</title>
+    <style>
+        * {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  position: relative;
+  top:0;
+  background-color: rgb(51, 51, 51);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Centered section inside the top navigation */
+.topnav-centered h1 {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+       
+    </style>
+   
+</head>
+<body>
+<div class="bg"></div>
+    <div class="loading-text">0%</div>
+
+    <script src="script.js"></script>
+<div class="topnav">
+    <!-- Centered h1 -->
+    <div class="topnav-centered">
+      <h1 style="color: salmon;">BookFinder</h1>
+    </div>
+
+   <!-- Left-aligned links (default) -->
+    <a href="login.html">Login</a>
+    <a href="signUp.html">Sign Up</a>
+
+  
+    <!-- Right-aligned links -->
+    <div class="topnav-right">
+      <a href="searchPage.html">Search</a>
+      <a href="about.html">About</a>
+      <a href="upcomingworks.html">Upcoming</a>
+    </div>
+  
+  </div>
+    
+    <div class="book_sort">
+        <div class="book_new">
+            <div class="book_left">Updated</div>
+            <div class="book_type" id="history" onmouseover="bookPutUp(0)">History</div>
+            <div class="book_type" id="family" onmouseover="bookPutUp(1)">Family</div>
+            <div class="book_type" id="culture" onmouseover="bookPutUp(2)">Culture</div>
+            <div class="book_type" id="novel" onmouseover="bookPutUp(3)">Novel</div>
+            <div class="book_right"><a href="#">More>></a></div>
+        </div>
+        <div class="book_class" style="height:250px;">
+            <!--HISTORY-->
+            <dl id="book_history">
+                <dt><img src="images/dd_history_1.jpg" alt="history"/></dt>
+                <dd><font class="book_title">SAPIENS: A BRIEF HISTORY OF HUMANKIND</font><br />
+                    by Yuval Noah Harari <br />
+                    <font class="book_publish">May 10, 2016</font><br />
+                    List Price$23.00<br />
+                    Price Online$15.00 </dd>
+                <dt><img src="images/dd_history_2.jpg" alt="history"/></dt>
+                <dd><font class="book_title">ON TYRANNY: TWENTY LESSONS FROM THE TWENTIETH CENTURY</font><br />
+                    byTimothy Snyder <br />
+                    <font class="book_publish">February 28, 2017</font><br />
+                    List Price$11.00<br />
+                    Price Online$8.00 </dd>
+                <dt><img src="images/dd_history_3.jpg" alt="history"/></dt>
+                <dd><font class="book_title">DUNKIRK: THE HISTORY BEHIND THE MAJOR MOTION PICTURE</font><br />
+                    byJoshua Levine<br />
+                    <font class="book_publish"> June 27, 2017</font><br />
+                    List Price$21.00<br />
+                    Price Online$12.00 </dd>
+                <dt><img src="images/dd_history_4.jpg" alt="history"/></dt>
+                <dd><font class="book_title">NO IS NOT ENOUGH:..</font><br />
+                    byNaomi Klein<br />
+                    <font class="book_publish">June 5, 2017</font><br />
+                    List Price$25.00<br />
+                    Price Online$20.00 </dd>
+            </dl>
+            <!--FAMILY-->
+            <dl id="book_family" class="book_none">
+               
+                <dt><img src="images/dd_history_3.jpg" alt="history"/></dt>
+                <dd><font class="book_title">DUNKIRK: THE HISTORY BEHIND THE MAJOR MOTION PICTURE</font><br />
+                    byJoshua Levine<br />
+                    <font class="book_publish"> June 27, 2017</font><br />
+                    List Price$21.00<br />
+                    Price Online$12.00 </dd>
+                <dt><img src="images/dd_history_4.jpg" alt="history"/></dt>
+                <dd><font class="book_title">NO IS NOT ENOUGH: RESISTING THE NEW SHOCK POLITICS AND WINNING..</font><br />
+                    byNaomi Klein<br />
+                    <font class="book_publish">June 5, 2017</font><br />
+                    List Price$25.00<br />
+                    Price Online$20.00 </dd>
+                     <dt><img src="images/dd_history_1.jpg" alt="history"/></dt>
+                <dd><font class="book_title">SAPIENS: A BRIEF HISTORY OF HUMANKIND</font><br />
+                    by Yuval Noah Harari <br />
+                    <font class="book_publish">May 10, 2016</font><br />
+                    List Price$23.00<br />
+                    Price Online$15.00 </dd>
+                <dt><img src="images/dd_history_2.jpg" alt="history"/></dt>
+                <dd><font class="book_title">ON TYRANNY: TWENTY LESSONS FROM THE TWENTIETH CENTURY</font><br />
+                    byTimothy Snyder <br />
+                    <font class="book_publish">February 28, 2017</font><br />
+                    List Price$11.00<br />
+                    Price Online$8.00 </dd>
+            </dl>
+            <!--CULTURE-->
+            <dl id="book_culture" class="book_none">
+                <dt><img src="images/dd_history_1.jpg" alt="history"/></dt>
+                <dd><font class="book_title">SAPIENS: A BRIEF HISTORY OF HUMANKIND</font><br />
+                    by Yuval Noah Harari <br />
+                    <font class="book_publish">May 10, 2016</font><br />
+                    List Price$23.00<br />
+                    Price Online$15.00 </dd>
+                <dt><img src="images/dd_history_2.jpg" alt="history"/></dt>
+                <dd><font class="book_title">ON TYRANNY: TWENTY LESSONS FROM THE TWENTIETH CENTURY</font><br />
+                    byTimothy Snyder <br />
+                    <font class="book_publish">February 28, 2017</font><br />
+                    List Price$11.00<br />
+                    Price Online$8.00 </dd>
+                <dt><img src="images/dd_history_3.jpg" alt="history"/></dt>
+                <dd><font class="book_title">DUNKIRK: THE HISTORY BEHIND THE MAJOR MOTION PICTURE</font><br />
+                    byJoshua Levine<br />
+                    <font class="book_publish"> June 27, 2017</font><br />
+                    List Price$21.00<br />
+                    Price Online$12.00 </dd>
+                <dt><img src="images/dd_history_4.jpg" alt="history"/></dt>
+                <dd><font class="book_title">NO IS NOT ENOUGH:..</font><br />
+                    byNaomi Klein<br />
+                    <font class="book_publish">June 5, 2017</font><br />
+                    List Price$25.00<br />
+                    Price Online$20.00 </dd>
+            </dl>
+            <!--NOVEL-->
+            <dl id="book_novel" class="book_none">
+                
+                <dt><img src="images/dd_history_3.jpg" alt="history"/></dt>
+                <dd><font class="book_title">DUNKIRK: THE HISTORY BEHIND THE MAJOR MOTION PICTURE</font><br />
+                    byJoshua Levine<br />
+                    <font class="book_publish"> June 27, 2017</font><br />
+                    List Price$21.00<br />
+                    Price Online$12.00 </dd>
+                <dt><img src="images/dd_history_4.jpg" alt="history"/></dt>
+                <dd><font class="book_title">NO IS NOT ENOUGH: RESISTING THE NEW SHOCK POLITICS AND WINNING..</font><br />
+                    byNaomi Klein<br />
+                    <font class="book_publish">June 5, 2017</font><br />
+                    List Price$25.00<br />
+                    Price Online$20.00 </dd>
+                    <dt><img src="images/dd_history_1.jpg" alt="history"/></dt>
+                <dd><font class="book_title">SAPIENS: A BRIEF HISTORY OF HUMANKIND</font><br />
+                    by Yuval Noah Harari <br />
+                    <font class="book_publish">May 10, 2016</font><br />
+                    List Price$23.00<br />
+                    Price Online$15.00 </dd>
+                <dt><img src="images/dd_history_2.jpg" alt="history"/></dt>
+                <dd><font class="book_title">ON TYRANNY: TWENTY LESSONS FROM THE TWENTIETH CENTURY</font><br />
+                    byTimothy Snyder <br />
+                    <font class="book_publish">February 28, 2017</font><br />
+                    List Price$11.00<br />
+                    Price Online$8.00 </dd>
+            </dl>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/book.js"></script>
+     
+</body>
+</html>
